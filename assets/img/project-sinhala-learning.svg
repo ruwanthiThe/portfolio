@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="ui-monospace, Menlo, Consolas, monospace">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1A1A1A" stroke-width="1"/></pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#D4FF32" stop-opacity=".2"/><stop offset="1" stop-color="#D4FF32" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="#000"/>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="400" cy="250" r="210" fill="url(#glow)"/>
+
+  <!-- Writing / Literacy Assessment Card (left) -->
+  <rect x="60" y="90" width="220" height="310" rx="18" fill="#1A1A1A" stroke="#2E2E2E" stroke-width="2"/>
+  <text x="84" y="128" font-size="13" fill="#9A9A9A">literacy · grade 3</text>
+  <rect x="84" y="146" width="172" height="120" rx="12" fill="#000" stroke="#D4FF32" stroke-width="2"/>
+  <text x="170" y="218" text-anchor="middle" font-size="44" font-weight="700" fill="#D4FF32">අ ආ</text>
+  <rect x="84" y="284" width="172" height="12" rx="6" fill="#2E2E2E"/>
+  <rect x="84" y="284" width="132" height="12" rx="6" fill="#D4FF32"/>
+  <text x="84" y="324" font-size="12" fill="#F5F5F0">letter formation · 86%</text>
+  <rect x="84" y="342" width="172" height="12" rx="6" fill="#2E2E2E"/>
+  <rect x="84" y="342" width="108" height="12" rx="6" fill="#D4FF32" opacity=".75"/>
+  <text x="84" y="378" font-size="12" fill="#9A9A9A">vowel &amp; punctuation</text>
+
+  <!-- Flow arrow -->
+  <path d="M292 245 H340" stroke="#D4FF32" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M340 235 l14 10 -14 10Z" fill="#D4FF32"/>
+
+  <!-- Explainable AI Core (center) -->
+  <rect x="360" y="140" width="140" height="210" rx="18" fill="#1A1A1A" stroke="#D4FF32" stroke-width="2"/>
+  <rect x="386" y="168" width="88" height="44" rx="10" fill="#D4FF32"/>
+  <text x="430" y="196" text-anchor="middle" font-size="18" font-weight="700" fill="#000">XAI</text>
+  <g stroke="#D4FF32" stroke-width="1.5" opacity=".7">
+    <path d="M395 250 L430 232 L465 250 M395 290 L430 272 L465 290 M430 232 V308"/>
+  </g>
+  <circle cx="395" cy="250" r="6" fill="#D4FF32"/><circle cx="465" cy="250" r="6" fill="#D4FF32"/>
+  <circle cx="430" cy="232" r="7" fill="#F5F5F0"/><circle cx="430" cy="272" r="7" fill="#D4FF32"/>
+  <circle cx="395" cy="290" r="6" fill="#D4FF32"/><circle cx="465" cy="290" r="6" fill="#D4FF32"/>
+  <text x="430" y="330" text-anchor="middle" font-size="12" fill="#9A9A9A">deep learning</text>
+
+  <!-- Flow arrow -->
+  <path d="M510 245 H556" stroke="#D4FF32" stroke-width="3" stroke-dasharray="6 6"/>
+  <path d="M556 235 l14 10 -14 10Z" fill="#D4FF32"/>
+
+  <!-- Personalized Pathway (right) -->
+  <rect x="576" y="90" width="170" height="310" rx="18" fill="#1A1A1A" stroke="#2E2E2E" stroke-width="2"/>
+  <text x="598" y="128" font-size="13" fill="#9A9A9A">pathway</text>
+  <rect x="598" y="148" width="126" height="48" rx="10" fill="#D4FF32"/>
+  <text x="612" y="177" font-size="13" font-weight="700" fill="#000">01 · Screening</text>
+  <rect x="598" y="212" width="126" height="48" rx="10" fill="#000" stroke="#D4FF32" stroke-width="2"/>
+  <text x="612" y="241" font-size="13" fill="#F5F5F0">02 · Practice</text>
+  <rect x="598" y="276" width="126" height="48" rx="10" fill="#000" stroke="#2E2E2E" stroke-width="2"/>
+  <text x="612" y="305" font-size="13" fill="#9A9A9A">03 · Progress</text>
+  <text x="598" y="368" font-size="12" fill="#D4FF32">FastAPI · MongoDB</text>
+</svg>

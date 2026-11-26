@@ -1,0 +1,3344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruwanthi Thennakoon – Portfolio</title>
+    <meta
+      name="description"
+      content="Ruwanthi Thennakoon – IT Undergraduate specializing in Project Management, Business Analysis, and Full-Stack Software Development."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <style>
+      :root {
+        --black: #000000;
+        --graphite: #1a1a1a;
+        --graphite-2: #242424;
+        --line: #2e2e2e;
+        --volt: #4d9fff;
+        --paper: #f5f5f0;
+        --ash: #9a9a9a;
+        --head: "Space Grotesk", system-ui, sans-serif;
+        --body: "Inter", system-ui, sans-serif;
+        --mono: "JetBrains Mono", ui-monospace, monospace;
+        --radius: 20px;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+      body {
+        margin: 0;
+        background: var(--black);
+        color: var(--paper);
+        font-family: var(--body);
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ::selection {
+        background: var(--volt);
+        color: var(--black);
+      }
+      :focus-visible {
+        outline: 2px solid var(--volt);
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+
+      .wrap {
+        width: min(1200px, 100% - 32px);
+        margin-inline: auto;
+      }
+      .label {
+        font-family: var(--mono);
+        font-size: 13px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ash);
+      }
+      .label .v {
+        color: var(--volt);
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--head);
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+      .section {
+        padding: 120px 0;
+        position: relative;
+      }
+      .section-head {
+        margin-bottom: 56px;
+      }
+      .section-head h2 {
+        font-size: clamp(36px, 6vw, 64px);
+        margin-top: 14px;
+      }
+      .section-head h2 .v {
+        color: var(--volt);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 16px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: var(--body);
+        transition:
+          transform 0.3s var(--ease),
+          background 0.3s,
+          color 0.3s,
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .btn-volt {
+        background: var(--volt);
+        color: var(--black);
+      }
+      .btn-volt:hover {
+        box-shadow: 0 10px 40px -10px rgba(77, 159, 255, 0.6);
+      }
+      .btn-ghost {
+        border-color: #3a3a3a;
+        color: var(--paper);
+        background: transparent;
+      }
+      .btn-ghost:hover {
+        border-color: var(--volt);
+        color: var(--volt);
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* Nav */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid transparent;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .nav.scrolled {
+        border-color: var(--line);
+        background: rgba(10, 10, 10, 0.85);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+      }
+      .logo {
+        font-family: var(--head);
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--volt);
+        box-shadow: 0 0 0 0 rgba(77, 159, 255, 0.6);
+        animation: pulse 2.4s infinite;
+      }
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+      .nav-links a:not(.btn) {
+        font-size: 15px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        color: var(--ash);
+        transition:
+          color 0.25s,
+          background 0.25s;
+      }
+      .nav-links a:not(.btn):hover {
+        color: var(--paper);
+      }
+      .nav-links a.active {
+        color: var(--paper);
+        background: var(--graphite);
+      }
+      .nav-links .btn {
+        margin-left: 12px;
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+      .menu-btn {
+        display: none;
+        background: var(--graphite);
+        border: 1px solid var(--line);
+        color: var(--paper);
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      .menu-btn svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .drawer {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        background: var(--black);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.35s,
+          visibility 0.35s;
+      }
+      .drawer.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .drawer a {
+        font-family: var(--head);
+        font-size: 40px;
+        font-weight: 600;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+        transform: translateY(20px);
+        opacity: 0;
+        transition:
+          transform 0.5s var(--ease),
+          opacity 0.5s,
+          color 0.2s;
+      }
+      .drawer a:hover {
+        color: var(--volt);
+      }
+      .drawer.open a {
+        transform: none;
+        opacity: 1;
+      }
+      .drawer.open a:nth-child(2) {
+        transition-delay: 0.05s;
+      }
+      .drawer.open a:nth-child(3) {
+        transition-delay: 0.1s;
+      }
+      .drawer.open a:nth-child(4) {
+        transition-delay: 0.15s;
+      }
+      .drawer.open a:nth-child(5) {
+        transition-delay: 0.2s;
+      }
+      .drawer.open a:nth-child(6) {
+        transition-delay: 0.25s;
+      }
+      .drawer-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        padding: 80px 0 100px;
+        overflow: hidden;
+      }
+      .hero-glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(
+          circle,
+          rgba(77, 159, 255, 0.14),
+          transparent 65%
+        );
+        left: var(--mx, 70%);
+        top: var(--my, 30%);
+        transform: translate(-50%, -50%);
+        transition:
+          left 0.6s var(--ease),
+          top 0.6s var(--ease);
+      }
+      .hero-grid-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.5;
+        background-image:
+          linear-gradient(var(--graphite) 1px, transparent 1px),
+          linear-gradient(90deg, var(--graphite) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(
+          ellipse at 50% 40%,
+          #000 20%,
+          transparent 70%
+        );
+        -webkit-mask-image: radial-gradient(
+          ellipse at 50% 40%,
+          #000 20%,
+          transparent 70%
+        );
+      }
+      .hero-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 36px;
+        height: 2px;
+        background: var(--volt);
+      }
+      .hero h1 {
+        font-size: clamp(44px, 7.4vw, 96px);
+        margin: 22px 0 20px;
+        letter-spacing: -0.035em;
+        line-height: 1;
+      }
+      .hero h1 .v {
+        color: var(--volt);
+      }
+      .tagline {
+        font-family: var(--head);
+        font-size: clamp(20px, 2.2vw, 26px);
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--paper);
+        max-width: 640px;
+        margin: 0 0 20px;
+      }
+      .tagline .v {
+        color: var(--volt);
+      }
+      .hero p.bio {
+        color: #c9c9c3;
+        font-size: 17px;
+        max-width: 640px;
+        margin: 0 0 36px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+      .socials {
+        display: flex;
+        gap: 10px;
+        margin-left: 4px;
+      }
+      .icon-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--graphite);
+        border: 1px solid var(--line);
+        transition:
+          transform 0.3s var(--ease),
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .icon-btn:hover {
+        transform: translateY(-3px) rotate(-6deg);
+        border-color: var(--volt);
+      }
+      .icon-btn i {
+        font-size: 22px;
+        color: var(--paper);
+      }
+
+      .photo-card {
+        position: relative;
+        justify-self: center;
+        width: min(400px, 100%);
+      }
+      .photo-frame {
+        position: relative;
+        border-radius: 28px;
+        padding: 14px;
+        background: var(--graphite);
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+      .photo-frame::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        z-index: 0;
+        background: conic-gradient(
+          from 0deg,
+          transparent 0 70%,
+          var(--volt) 85%,
+          transparent 100%
+        );
+        animation: spin 6s linear infinite;
+      }
+      .photo-frame::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 26px;
+        background: var(--graphite);
+        z-index: 0;
+      }
+      .photo-frame img {
+        position: relative;
+        z-index: 1;
+        border-radius: 18px;
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        object-position: 50% 18%;
+      }
+      .photo-tag {
+        position: absolute;
+        z-index: 2;
+        left: -22px;
+        bottom: 36px;
+        background: var(--volt);
+        color: var(--black);
+        font-family: var(--mono);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 16px;
+        border-radius: 12px;
+        animation: float 4s ease-in-out infinite;
+      }
+
+      /* Load-in */
+      .js .load {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: up 0.9s var(--ease) forwards;
+      }
+      .js .load.d1 {
+        animation-delay: 0.1s;
+      }
+      .js .load.d2 {
+        animation-delay: 0.2s;
+      }
+      .js .load.d3 {
+        animation-delay: 0.3s;
+      }
+      .js .load.d4 {
+        animation-delay: 0.4s;
+      }
+      .js .load.d5 {
+        animation-delay: 0.55s;
+      }
+      .js .load.scale {
+        transform: scale(0.92);
+        animation-name: pop;
+        animation-duration: 1.1s;
+        animation-delay: 0.3s;
+      }
+
+      /* Marquee */
+      .marquee {
+        border-block: 1px solid var(--line);
+        background: var(--graphite);
+        overflow: hidden;
+        padding: 22px 0;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 48px;
+        width: max-content;
+        animation: marquee 40s linear infinite;
+      }
+      .marquee:hover .marquee-track {
+        animation-play-state: paused;
+      }
+      .marquee span {
+        font-family: var(--head);
+        font-size: 26px;
+        font-weight: 600;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        color: var(--paper);
+      }
+      .marquee span::after {
+        content: "✦";
+        color: var(--volt);
+        font-size: 18px;
+      }
+
+      /* Scroll reveal */
+      .js .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .js .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* About */
+      .about-top {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 56px;
+        align-items: center;
+        margin-bottom: 64px;
+      }
+      .avatar {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--volt);
+        box-shadow: 0 0 0 10px var(--graphite);
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 18%;
+      }
+      .about-top h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      .about-top p {
+        color: #d6d6d0;
+        font-size: 19px;
+        margin: 0;
+        max-width: 760px;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: var(--graphite);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        transition:
+          transform 0.4s var(--ease),
+          border-color 0.4s,
+          box-shadow 0.4s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(77, 159, 255, 0.5);
+        box-shadow: 0 24px 60px -30px rgba(77, 159, 255, 0.35);
+      }
+      .card-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+      .card-title .ico {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--volt);
+        color: var(--black);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .card-title .ico svg {
+        width: 20px;
+        height: 20px;
+      }
+      .card-title h3 {
+        font-size: 20px;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .tile {
+        background: var(--black);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        transition:
+          border-color 0.3s,
+          transform 0.3s var(--ease);
+      }
+      .tile:hover {
+        border-color: var(--volt);
+        transform: translateY(-3px);
+      }
+      .tile i {
+        font-size: 30px;
+      }
+      .tile svg {
+        width: 30px;
+        height: 30px;
+      }
+      .tile img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+      .tile .t-letter {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        background: var(--paper);
+        color: var(--black);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-family: var(--head);
+        font-size: 13px;
+      }
+      /* devicon "original/plain" icons for dark brands are invisible on black */
+      .tile i.devicon-express-original,
+      .tile i.devicon-github-original,
+      .tile i.devicon-prisma-original,
+      .tile i.devicon-socketio-original,
+      .chip i.devicon-github-original {
+        color: var(--paper) !important;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--black);
+        font-size: 14px;
+        color: var(--paper);
+        transition:
+          background 0.25s,
+          color 0.25s,
+          border-color 0.25s;
+      }
+      .chip:hover {
+        background: var(--volt);
+        color: var(--black);
+        border-color: var(--volt);
+      }
+      .chip.soft {
+        border-color: rgba(77, 159, 255, 0.35);
+        color: var(--volt);
+      }
+      .chip.soft:hover {
+        color: var(--black);
+      }
+      .sub-label {
+        margin: 22px 0 12px;
+        font-size: 12px;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding-left: 56px;
+        max-width: 960px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        bottom: 8px;
+        width: 2px;
+        background: var(--line);
+      }
+      .timeline-fill {
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        width: 2px;
+        height: 0;
+        background: var(--volt);
+        transition: height 0.2s linear;
+      }
+      .t-item {
+        position: relative;
+        margin-bottom: 28px;
+      }
+      .t-dot {
+        position: absolute;
+        left: -49px;
+        top: 34px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--black);
+        border: 2px solid var(--ash);
+      }
+      .t-dot.now {
+        border-color: var(--volt);
+        background: var(--volt);
+        animation: pulse 2s infinite;
+      }
+      .t-dot.edu {
+        border-color: var(--volt);
+      }
+      .t-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+      .t-head h3 {
+        font-size: 26px;
+      }
+      .t-org {
+        color: var(--volt);
+        font-weight: 600;
+        margin-top: 6px;
+        font-size: 16px;
+      }
+      .date {
+        font-family: var(--mono);
+        font-size: 13px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--black);
+        height: fit-content;
+        white-space: nowrap;
+      }
+      .date.now {
+        background: var(--volt);
+        color: var(--black);
+        border-color: var(--volt);
+      }
+      .bullets {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+        display: grid;
+        gap: 12px;
+      }
+      .bullets li {
+        position: relative;
+        padding-left: 26px;
+        color: #d6d6d0;
+        font-size: 16px;
+      }
+      .bullets li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 10px;
+        height: 2px;
+        background: var(--volt);
+      }
+      .bullets strong,
+      .t-item p strong,
+      .more strong {
+        color: var(--paper);
+        font-weight: 600;
+      }
+      .t-item p {
+        color: #d6d6d0;
+        margin: 0 0 16px;
+      }
+      .t-item p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Projects */
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+      .project {
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .p-img {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16/10;
+        border-bottom: 1px solid var(--line);
+        background: #0b0b0b;
+      }
+      .p-img.stage {
+        background-color: #090909;
+        background-image:
+          radial-gradient(
+            circle at 50% 45%,
+            rgba(77, 159, 255, 0.11),
+            transparent 68%
+          ),
+          linear-gradient(var(--graphite) 1px, transparent 1px),
+          linear-gradient(90deg, var(--graphite) 1px, transparent 1px);
+        background-size:
+          100% 100%,
+          32px 32px,
+          32px 32px;
+      }
+      .p-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.8s var(--ease);
+        cursor: zoom-in;
+      }
+      .p-img img.contain {
+        object-fit: contain;
+        padding: 12px;
+        border-radius: 16px;
+      }
+      .project:hover .p-img img {
+        transform: scale(1.04);
+      }
+      .p-num {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 2;
+        font-family: var(--mono);
+        font-size: 13px;
+        background: var(--black);
+        color: var(--volt);
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+      }
+      .p-count {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 2;
+        font-family: var(--mono);
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.82);
+        color: var(--paper);
+        border: 1px solid var(--line);
+        padding: 5px 10px;
+        border-radius: 999px;
+      }
+      .p-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: rgba(0, 0, 0, 0.82);
+        color: var(--paper);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        opacity: 0;
+        transition:
+          opacity 0.25s,
+          border-color 0.25s,
+          color 0.25s,
+          background 0.25s;
+      }
+      .p-nav.prev {
+        left: 12px;
+      }
+      .p-nav.next {
+        right: 12px;
+      }
+      .p-img:hover .p-nav,
+      .p-img:focus-within .p-nav {
+        opacity: 1;
+      }
+      .p-nav:hover {
+        border-color: var(--volt);
+        color: var(--volt);
+        background: var(--black);
+      }
+      .p-nav svg {
+        width: 16px;
+        height: 16px;
+      }
+      @media (hover: none), (max-width: 860px) {
+        .p-nav {
+          opacity: 1;
+        }
+      }
+
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.25s,
+          visibility 0.25s;
+      }
+      .lightbox.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .lb-inner {
+        position: relative;
+        width: min(1040px, 100%);
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+      .lb-media {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-media img {
+        max-width: 100%;
+        max-height: 76vh;
+        object-fit: contain;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--graphite);
+      }
+      .lb-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 12px;
+      }
+      .lb-cap {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--paper);
+      }
+      .lb-cap span {
+        color: var(--volt);
+        margin-right: 10px;
+      }
+      .lb-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--graphite);
+        color: var(--paper);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition:
+          border-color 0.25s,
+          color 0.25s;
+      }
+      .lb-btn:hover {
+        border-color: var(--volt);
+        color: var(--volt);
+      }
+      .lb-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .lb-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lb-nav.prev {
+        left: 12px;
+      }
+      .lb-nav.next {
+        right: 12px;
+      }
+      .p-body {
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .p-body h3 {
+        font-size: 23px;
+        margin-bottom: 12px;
+      }
+      .badge {
+        display: inline-block;
+        align-self: flex-start;
+        font-family: var(--mono);
+        font-size: 12px;
+        background: var(--volt);
+        color: var(--black);
+        padding: 4px 10px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+      }
+      .p-body > p {
+        color: #d6d6d0;
+        font-size: 16px;
+        margin: 0 0 16px;
+      }
+      .more {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s var(--ease);
+      }
+      .more > div {
+        overflow: hidden;
+      }
+      .more.open {
+        grid-template-rows: 1fr;
+      }
+      .more h4 {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--volt);
+        margin: 18px 0 10px;
+        font-weight: 500;
+      }
+      .more .bullets li {
+        font-size: 15px;
+      }
+      .toggle {
+        align-self: flex-start;
+        background: none;
+        border: 0;
+        color: var(--volt);
+        font-family: var(--mono);
+        font-size: 14px;
+        cursor: pointer;
+        padding: 4px 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .toggle svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.4s var(--ease);
+      }
+      .toggle[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+      }
+      .p-foot {
+        margin-top: auto;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+      .p-foot .chips .chip {
+        font-size: 13px;
+        padding: 5px 11px;
+      }
+      .gh-link {
+        flex: none;
+        width: 44px;
+        height: 44px;
+      }
+
+      /* Contact */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 24px;
+      }
+      .contact-hero h2 {
+        font-size: clamp(44px, 7vw, 88px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin: 14px 0 48px;
+      }
+      .contact-hero h2 .v {
+        color: var(--volt);
+      }
+      form .field {
+        margin-bottom: 20px;
+      }
+      form label {
+        display: block;
+        font-family: var(--mono);
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ash);
+        margin-bottom: 8px;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        background: var(--black);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 15px 18px;
+        color: var(--paper);
+        font: inherit;
+        font-size: 16px;
+        transition:
+          border-color 0.25s,
+          box-shadow 0.25s;
+        resize: vertical;
+      }
+      form input::placeholder,
+      form textarea::placeholder {
+        color: #6e6e6e;
+      }
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        border-color: var(--volt);
+        box-shadow: 0 0 0 4px rgba(77, 159, 255, 0.15);
+      }
+      form .btn {
+        width: 100%;
+      }
+      .links {
+        display: grid;
+        gap: 16px;
+      }
+      .link-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .link-card .icon-btn {
+        flex: none;
+        width: 60px;
+        height: 60px;
+      }
+      .link-card h3 {
+        font-size: 22px;
+      }
+      .link-card p {
+        margin: 2px 0 0;
+        color: var(--ash);
+        font-size: 15px;
+        word-break: break-all;
+      }
+      .link-card .arr {
+        margin-left: auto;
+        width: 24px;
+        height: 24px;
+        color: var(--ash);
+        transition:
+          transform 0.3s var(--ease),
+          color 0.3s;
+        flex: none;
+      }
+      .link-card:hover .arr {
+        transform: translate(4px, -4px);
+        color: var(--volt);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 32px 0;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      @keyframes up {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes pop {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes float {
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(77, 159, 255, 0.55);
+        }
+        70% {
+          box-shadow: 0 0 0 12px rgba(77, 159, 255, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(77, 159, 255, 0);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .skills-grid,
+        .projects {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+        .menu-btn {
+          display: grid;
+          place-items: center;
+        }
+        .nav-inner {
+          height: 64px;
+        }
+        html {
+          scroll-padding-top: 72px;
+        }
+        .hero {
+          padding: 32px 0 64px;
+        }
+        .hero-glow {
+          display: none;
+        }
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .photo-card {
+          width: min(340px, 86%);
+        }
+        .about-top {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          margin-bottom: 48px;
+        }
+        .avatar {
+          width: 150px;
+          height: 150px;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 72px 0;
+        }
+        .section-head {
+          margin-bottom: 36px;
+        }
+      }
+      @media (max-width: 640px) {
+        body {
+          font-size: 16px;
+        }
+        .logo {
+          font-size: 18px;
+        }
+        .drawer a {
+          font-size: 32px;
+        }
+        .hero h1 {
+          margin: 16px 0 14px;
+        }
+        .eyebrow {
+          font-size: 11px;
+          letter-spacing: 0.14em;
+          gap: 10px;
+        }
+        .eyebrow::before {
+          width: 20px;
+        }
+        .tagline {
+          font-size: 19px;
+        }
+        .hero p.bio {
+          font-size: 16px;
+          margin-bottom: 28px;
+        }
+        .hero-actions {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .hero-actions .btn {
+          padding: 14px 12px;
+          font-size: 15px;
+        }
+        .hero-actions .btn-volt {
+          grid-column: 1 / -1;
+        }
+        .socials {
+          grid-column: 1 / -1;
+          justify-content: center;
+          margin: 6px 0 0;
+        }
+        .skills-grid,
+        .projects {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .tile {
+          font-size: 12px;
+          padding: 12px 4px;
+        }
+        .timeline {
+          padding-left: 30px;
+        }
+        .timeline::before,
+        .timeline-fill {
+          left: 6px;
+        }
+        .t-dot {
+          left: -32px;
+          top: 28px;
+          width: 16px;
+          height: 16px;
+        }
+        .t-head h3 {
+          font-size: 21px;
+        }
+        .t-head {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .bullets li {
+          font-size: 15px;
+        }
+        .card {
+          padding: 20px;
+          border-radius: 16px;
+        }
+        .p-body {
+          padding: 20px;
+        }
+        .p-body h3 {
+          font-size: 21px;
+        }
+        .p-foot {
+          align-items: flex-end;
+        }
+        .contact-hero h2 {
+          margin-bottom: 32px;
+        }
+        .link-card {
+          gap: 14px;
+        }
+        .link-card .icon-btn {
+          width: 52px;
+          height: 52px;
+        }
+        .link-card h3 {
+          font-size: 19px;
+        }
+        .photo-tag {
+          left: -8px;
+        }
+        .marquee {
+          padding: 16px 0;
+        }
+        .marquee span {
+          font-size: 18px;
+          gap: 32px;
+        }
+        .marquee-track {
+          gap: 32px;
+        }
+        footer .wrap {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      /* No hover lift on touch screens: it sticks after a tap */
+      @media (hover: none) {
+        .card:hover,
+        .tile:hover,
+        .btn:hover,
+        .icon-btn:hover {
+          transform: none;
+        }
+        .project:hover .p-img img {
+          transform: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        .js .load,
+        .js .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="nav" id="nav">
+      <div class="wrap nav-inner">
+        <a href="#home" class="logo"
+          ><span class="logo-dot"></span>Ruwanthi Thennakoon</a
+        >
+        <nav class="nav-links" aria-label="Main">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact" class="btn btn-volt">Contact</a>
+        </nav>
+        <button
+          class="menu-btn"
+          id="menuOpen"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+        >
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <button
+        class="menu-btn drawer-close"
+        id="menuClose"
+        aria-label="Close menu"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" style="color: var(--volt)">Contact</a>
+    </div>
+
+    <main id="home">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="wrap hero-inner">
+          <div>
+            <div class="eyebrow label load d1">
+              IT Undergraduate · Project Management &amp; Business Analysis
+            </div>
+            <h1 class="load d2">Ruwanthi <span class="v">Thennakoon</span></h1>
+            <p class="tagline load d3">
+              I bring technology, analytical thinking, and collaboration
+              together to turn
+              <span class="v">ideas into meaningful solutions.</span>
+            </p>
+            <p class="bio load d3">
+              Information Technology undergraduate with hands-on experience in
+              full-stack software development, requirements analysis, and
+              collaborative software projects. Previously worked as a Full Stack
+              Software Engineer Intern at Advantage Group Australasia, gaining
+              practical experience in application development, Agile practices,
+              and team collaboration. Currently pursuing a BSc (Hons) in
+              Information Technology specializing in Information Technology at
+              SLIIT, with a passion for project management, business analysis,
+              process improvement, and delivering impactful technology
+              solutions.
+            </p>
+            <div class="hero-actions load d4">
+              <a
+                href="assets/pdf/Ruwanthi Thennakoon CV.pdf"
+                download="Ruwanthi Thennakoon CV.pdf"
+                class="btn btn-volt"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"
+                  />
+                </svg>
+                Download CV
+              </a>
+              <a href="#about" class="btn btn-ghost">About Me</a>
+              <div class="socials">
+                <a
+                  href="https://github.com/ruwanthiThe"
+                  target="_blank"
+                  rel="noopener"
+                  class="icon-btn"
+                  aria-label="GitHub"
+                  ><i class="devicon-github-original"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/ruwanthi-thennakoon-469062371"
+                  target="_blank"
+                  rel="noopener"
+                  class="icon-btn"
+                  aria-label="LinkedIn"
+                  ><i class="devicon-linkedin-plain"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="photo-card load scale">
+            <div class="photo-frame">
+              <img
+                src="assets/img/IMG_0328.png"
+                alt="Ruwanthi Thennakoon profile photo"
+              />
+            </div>
+            <div class="photo-tag">PM · BA · Full-Stack</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee">
+          <span>Java</span><span>Python</span><span>JavaScript</span
+          ><span>TypeScript</span><span>SQL</span><span>React</span
+          ><span>React Native</span><span>Node.js</span><span>Django</span
+          ><span>Spring Boot</span><span>FastAPI</span><span>Jira</span
+          ><span>Trello</span><span>Agile</span><span>Business Analysis</span
+          ><span>Docker</span>
+        </div>
+      </div>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="label"><span class="v">01</span> · About Me</div>
+            <h2>
+              Turning ideas into <span class="v">meaningful solutions.</span>
+            </h2>
+          </div>
+
+          <div class="about-top reveal">
+            <div class="avatar">
+              <img
+                src="assets/img/IMG_0328.png"
+                alt="Ruwanthi Thennakoon profile photo"
+              />
+            </div>
+            <div>
+              <h3>My Journey</h3>
+              <p>
+                As an Information Technology undergraduate with a passion for
+                project management and business analysis, I enjoy bridging the
+                gap between business needs and technology. With a strong
+                foundation in software development and practical experience
+                through my internship and university projects, I bring an
+                analytical, collaborative, and solution-oriented approach to
+                every project I undertake.
+              </p>
+            </div>
+          </div>
+
+          <div class="label reveal" style="margin-bottom: 24px">
+            Tech Stack &amp; Skills
+          </div>
+          <div class="skills-grid">
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    /></svg
+                ></span>
+                <h3>Languages</h3>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <i class="devicon-java-plain colored"></i>Java
+                </div>
+                <div class="tile">
+                  <i class="devicon-python-plain colored"></i>Python
+                </div>
+                <div class="tile">
+                  <i class="devicon-javascript-plain colored"></i>JavaScript
+                </div>
+                <div class="tile">
+                  <i class="devicon-typescript-plain colored"></i>TypeScript
+                </div>
+                <div class="tile">
+                  <svg
+                    fill="none"
+                    stroke="var(--volt)"
+                    stroke-width="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <ellipse cx="12" cy="5" rx="7" ry="3" />
+                    <path d="M5 5v14c0 1.66 3.13 3 7 3s7-1.34 7-3V5" />
+                    <path d="M5 12c0 1.66 3.13 3 7 3s7-1.34 7-3" /></svg
+                  >SQL
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    /></svg
+                ></span>
+                <h3>Frameworks &amp; Tech</h3>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <i class="devicon-react-original colored"></i>React
+                </div>
+                <div class="tile">
+                  <i class="devicon-react-original colored"></i>React Native
+                </div>
+                <div class="tile"><span class="t-letter">E</span>Expo</div>
+                <div class="tile">
+                  <i class="devicon-nodejs-plain colored"></i>Node.js
+                </div>
+                <div class="tile">
+                  <i class="devicon-express-original"></i>Express.js
+                </div>
+                <div class="tile">
+                  <i class="devicon-django-plain" style="color: #44b78b"></i
+                  >Django
+                </div>
+                <div class="tile">
+                  <i class="devicon-spring-original colored"></i>Spring Boot
+                </div>
+                <div class="tile">
+                  <i class="devicon-fastapi-plain colored"></i>FastAPI
+                </div>
+                <div class="tile">
+                  <i class="devicon-tailwindcss-original colored"></i>Tailwind
+                  CSS
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4"
+                    /></svg
+                ></span>
+                <h3>Databases</h3>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <i class="devicon-mysql-plain colored"></i>MySQL
+                </div>
+                <div class="tile">
+                  <i class="devicon-mongodb-plain colored"></i>MongoDB
+                </div>
+                <div class="tile">
+                  <i class="devicon-postgresql-plain colored"></i>PostgreSQL
+                </div>
+                <div class="tile">
+                  <i class="devicon-firebase-plain colored"></i>Firebase
+                </div>
+                <div class="tile">
+                  <i class="devicon-redis-plain colored"></i>Redis
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.75 3.1v5.7a2 2 0 01-.59 1.42L4.5 14.9M9.75 3.1h4.5m-4.5 0H8.5m5.75 0v5.7a2 2 0 00.59 1.42l4.66 4.68M14.25 3.1h1.25M4.5 14.9l-.9.9A2 2 0 005 19.2h14a2 2 0 001.4-3.4l-.9-.9M4.5 14.9h15"
+                    /></svg
+                ></span>
+                <h3>Libraries &amp; AI Tools</h3>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <i class="devicon-tensorflow-original colored"></i>TensorFlow
+                </div>
+                <div class="tile">
+                  <i class="devicon-keras-plain colored"></i>Keras
+                </div>
+                <div class="tile">
+                  <i class="devicon-prisma-original"></i>Prisma ORM
+                </div>
+                <div class="tile">
+                  <i class="devicon-socketio-original"></i>Socket.IO
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                    /></svg
+                ></span>
+                <h3>Development Tools</h3>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <i class="devicon-vscode-plain colored"></i>VS Code
+                </div>
+                <div class="tile">
+                  <i class="devicon-docker-plain colored"></i>Docker
+                </div>
+                <div class="tile">
+                  <i class="devicon-git-plain colored"></i>Git
+                </div>
+                <div class="tile">
+                  <i class="devicon-github-original"></i>GitHub
+                </div>
+                <div class="tile">
+                  <i class="devicon-postman-plain colored"></i>Postman
+                </div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    /></svg
+                ></span>
+                <h3>Architectures &amp; Concepts</h3>
+              </div>
+              <div class="chips">
+                <span class="chip">Object-Oriented Programming (OOP)</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">WebSockets</span>
+                <span class="chip">Client-Server Architecture</span>
+                <span class="chip">Deep Learning</span>
+                <span class="chip">Explainable AI (XAI)</span>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                    /></svg
+                ></span>
+                <h3>Project Management &amp; Design Tools</h3>
+              </div>
+              <div class="chips">
+                <span class="chip"
+                  ><i class="devicon-jira-plain colored"></i>Jira</span
+                >
+                <span class="chip"
+                  ><i class="devicon-trello-plain colored"></i>Trello</span
+                >
+                <span class="chip"
+                  ><i class="devicon-figma-plain colored"></i>Figma</span
+                >
+                <span class="chip">Agile Principles</span>
+                <span class="chip">Task Management</span>
+                <span class="chip">Progress Tracking</span>
+                <span class="chip">Project Documentation</span>
+                <span class="chip">Workflow Coordination</span>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    /></svg
+                ></span>
+                <h3>Business Analysis</h3>
+              </div>
+              <div class="chips">
+                <span class="chip">Requirements Gathering</span>
+                <span class="chip">Requirements Analysis</span>
+                <span class="chip">Functional Requirements Documentation</span>
+                <span class="chip">Business Process Analysis</span>
+                <span class="chip">Workflow Design</span>
+                <span class="chip">Use Case Diagrams</span>
+                <span class="chip">Activity Diagrams</span>
+                <span class="chip">Microsoft Excel</span>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card-title">
+                <span class="ico"
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                    /></svg
+                ></span>
+                <h3>Soft Skills</h3>
+              </div>
+              <div class="chips">
+                <span class="chip soft">Problem-Solving</span>
+                <span class="chip soft">Analytical Thinking</span>
+                <span class="chip soft">Team Collaboration</span>
+                <span class="chip soft">Communication</span>
+                <span class="chip soft">Time Management</span>
+                <span class="chip soft">Leadership</span>
+                <span class="chip soft">Adaptability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="label">
+              <span class="v">02</span> · Experience &amp; Education
+            </div>
+            <h2>Professional <span class="v">path.</span></h2>
+          </div>
+
+          <div class="timeline" id="timeline">
+            <div class="timeline-fill" id="timelineFill"></div>
+
+            <div class="t-item reveal">
+              <span class="t-dot"></span>
+              <div class="card">
+                <div class="t-head">
+                  <div>
+                    <h3>Full Stack Software Engineer Intern</h3>
+                    <div class="t-org">Advantage Group Australasia</div>
+                  </div>
+                  <span class="date">Dec 2025 – Sep 2026</span>
+                </div>
+                <ul class="bullets">
+                  <li>
+                    Contributed to the development of <strong>RideX</strong>, a
+                    ride-hailing application, developing mobile and backend
+                    functionalities to support rider and driver workflows.
+                  </li>
+                  <li>
+                    Worked on <strong>TutorX</strong>, an AI-based educational
+                    assistant, focusing on mobile application development, API
+                    integration, and user experience.
+                  </li>
+                  <li>
+                    Contributed to <strong>ChatX</strong>, a messaging
+                    application, supporting mobile and backend development.
+                  </li>
+                  <li>
+                    Developed and integrated RESTful APIs to support application
+                    functionalities and communication between frontend and
+                    backend systems.
+                  </li>
+                  <li>
+                    Collaborated with development teams to understand
+                    application requirements, implement features, and support
+                    software project delivery.
+                  </li>
+                  <li>
+                    Participated in application testing, debugging, and issue
+                    resolution to improve system functionality and reliability.
+                  </li>
+                  <li>
+                    Gained practical experience in Agile development practices,
+                    version control, and collaborative software development
+                    workflows.
+                  </li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">React Native</span
+                  ><span class="chip">TypeScript</span
+                  ><span class="chip">Node.js</span
+                  ><span class="chip">Express.js</span>
+                  <span class="chip">REST APIs</span
+                  ><span class="chip">Git</span><span class="chip">GitHub</span
+                  ><span class="chip">Agile</span
+                  ><span class="chip">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="t-item reveal">
+              <span class="t-dot edu now"></span>
+              <div class="card">
+                <div class="t-head">
+                  <div>
+                    <h3>BSc (Hons) in Information Technology</h3>
+                    <div class="t-org">
+                      Sri Lanka Institute of Information Technology (SLIIT)
+                    </div>
+                  </div>
+                  <span class="date now">May 2023 – Present</span>
+                </div>
+                <p>
+                  Specializing in <strong>Information Technology</strong>.
+                  Building core expertise in software development, system
+                  design, database management, business analysis, and IT project
+                  management through academic studies and collaborative
+                  projects.
+                </p>
+                <div class="chips">
+                  <span class="chip soft">CGPA: 3.49 / 4.00</span>
+                  <span class="chip"
+                    >Dean's List Award (Year 3, Sem 1 · 2025)</span
+                  >
+                  <span class="chip"
+                    >Research Paper Co-author · DTECBIZ 2026</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="t-item reveal">
+              <span class="t-dot edu"></span>
+              <div class="card">
+                <div class="t-head">
+                  <div>
+                    <h3>Diploma in Information and Communication Technology</h3>
+                    <div class="t-org">ICBT Campus</div>
+                  </div>
+                  <span class="date">2021</span>
+                </div>
+                <p>
+                  Completed foundational studies in information and
+                  communication technology, building core technical skills in
+                  software fundamentals, computing systems, and practical IT
+                  workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="label"><span class="v">03</span> · Projects</div>
+            <h2>Featured <span class="v">work.</span></h2>
+          </div>
+
+          <div class="projects">
+            <article class="card project reveal">
+              <div class="p-img">
+                <img
+                  src="assets/img/project-sinhala-learning.svg"
+                  alt="AI-Based Personalized Sinhala Language Learning System"
+                /><span class="p-num">01</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">Ongoing Group Research</span>
+                <h3>AI-Based Personalized Sinhala Language Learning System</h3>
+                <p>
+                  An AI-driven mobile learning platform designed to identify
+                  Sinhala literacy and mathematics difficulties in children
+                  through explainable assessments, personalized interventions,
+                  and progress tracking.
+                </p>
+                <div class="more" id="more-1">
+                  <div>
+                    <h4>Key Research &amp; Innovations</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>AI-Based Screening:</strong> Identification of
+                        specific learning difficulties.
+                      </li>
+                      <li>
+                        <strong>Explainable AI:</strong> Providing
+                        understandable assessment results.
+                      </li>
+                      <li>
+                        <strong>Personalized Learning:</strong> Targeted
+                        interventions based on individual learning needs.
+                      </li>
+                      <li>
+                        <strong>Progress Tracking:</strong> Monitoring learning
+                        performance and improvement.
+                      </li>
+                    </ul>
+                    <h4>My Focus &amp; Contribution</h4>
+                    <ul class="bullets">
+                      <li>
+                        Developing an AI-based component for early
+                        identification of children who are slow in learning
+                        Sinhala.
+                      </li>
+                      <li>
+                        Assessing letter formation, vowel symbol usage, and
+                        punctuation.
+                      </li>
+                      <li>
+                        Applying deep learning and Explainable AI for
+                        micro-skill assessment.
+                      </li>
+                      <li>
+                        Developing personalized Grade 3 learning pathways and
+                        progress tracking.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-1"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React Native</span
+                    ><span class="chip">TypeScript</span
+                    ><span class="chip">Python</span
+                    ><span class="chip">FastAPI</span
+                    ><span class="chip">MongoDB</span
+                    ><span class="chip">Deep Learning</span
+                    ><span class="chip">XAI</span>
+                  </div>
+                  <a
+                    href="https://github.com/Janith303/Personalize-Sinhala-and-Maths-Intervention-"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div
+                class="p-img stage"
+                data-gallery='[
+              {"src":"assets/img/projects/ridewave/01-driver-dashboard.jpeg","alt":"RideWave Driver Dashboard","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/02-rider-home.jpeg","alt":"RideWave Rider Home","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/03-ride-route.jpg","alt":"RideWave Live Route & Booking","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/04-plan-ride.jpg","alt":"RideWave Plan Your Ride","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/05-onboarding.jpg","alt":"RideWave Destination Onboarding","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/06-vehicle-registration.jpeg","alt":"RideWave Vehicle Registration","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/07-phone-login.jpeg","alt":"RideWave Phone Authentication","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/08-phone-otp.jpeg","alt":"RideWave Phone OTP Verification","fit":"contain"},
+              {"src":"assets/img/projects/ridewave/09-email-otp.jpeg","alt":"RideWave Email OTP Verification","fit":"contain"}
+            ]'
+              >
+                <img
+                  class="contain"
+                  src="assets/img/projects/ridewave/01-driver-dashboard.jpeg"
+                  alt="RideWave Driver Dashboard"
+                />
+                <span class="p-num">02</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">Personal Project · 2026</span>
+                <h3>RideWave</h3>
+                <p>
+                  A full-stack ride-sharing platform with separate mobile
+                  applications for riders and drivers, designed to simplify ride
+                  bookings and transportation services.
+                </p>
+                <div class="more" id="more-2">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>User Authentication:</strong> Secure
+                        registration, login, and verification.
+                      </li>
+                      <li>
+                        <strong>Ride Management:</strong> Ride requests,
+                        bookings, and ride management.
+                      </li>
+                      <li>
+                        <strong>Real-Time Tracking:</strong> Live driver
+                        location tracking.
+                      </li>
+                      <li>
+                        <strong>Ride Status Updates:</strong> Real-time
+                        communication between riders and drivers.
+                      </li>
+                    </ul>
+                    <h4>Development &amp; Implementation</h4>
+                    <ul class="bullets">
+                      <li>
+                        Designed and developed separate rider and driver mobile
+                        applications.
+                      </li>
+                      <li>Developed backend services and RESTful APIs.</li>
+                      <li>
+                        Implemented authentication and ride-booking workflows.
+                      </li>
+                      <li>
+                        Integrated WebSockets for real-time communication and
+                        location tracking.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-2"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React Native</span
+                    ><span class="chip">Expo</span
+                    ><span class="chip">TypeScript</span
+                    ><span class="chip">Node.js</span
+                    ><span class="chip">Express.js</span
+                    ><span class="chip">Prisma</span
+                    ><span class="chip">WebSockets</span>
+                  </div>
+                  <a
+                    href="https://github.com/ruwanthiThe/RideWave"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div
+                class="p-img stage"
+                data-gallery='[
+              {"src":"assets/img/projects/english-tutor/01-choose-path.jpg","alt":"English Tutor Role Selection","fit":"cover"},
+              {"src":"assets/img/projects/english-tutor/02-student-dashboard.png","alt":"English Tutor Student Dashboard","fit":"contain"},
+              {"src":"assets/img/projects/english-tutor/03-course-structure.png","alt":"English Tutor Course Structure","fit":"cover"},
+              {"src":"assets/img/projects/english-tutor/04-academic-overview.png","alt":"English Tutor Academic Overview","fit":"contain"},
+              {"src":"assets/img/projects/english-tutor/05-landing.jpg","alt":"English Tutor Landing Page","fit":"contain"},
+              {"src":"assets/img/projects/english-tutor/06-course-info.png","alt":"English Tutor Course Creation","fit":"contain"}
+            ]'
+              >
+                <img
+                  src="assets/img/projects/english-tutor/01-choose-path.jpg"
+                  alt="English Tutor Role Selection"
+                />
+                <span class="p-num">03</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">University Group Project · 2026</span>
+                <h3>English Tutor</h3>
+                <p>
+                  An intelligent English learning platform for university
+                  students, featuring personalized learning, tutor management,
+                  placement assessments, and an academic Q&amp;A community.
+                </p>
+                <div class="more" id="more-3">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>Personalized Learning:</strong> Provides
+                        learning pathways tailored to students' proficiency and
+                        progress.
+                      </li>
+                      <li>
+                        <strong>Placement Assessments:</strong> Evaluates
+                        students' English proficiency to recommend suitable
+                        learning pathways.
+                      </li>
+                      <li>
+                        <strong>Tutor Recommendations:</strong> Helps students
+                        discover suitable tutors.
+                      </li>
+                      <li>
+                        <strong>Academic Q&amp;A:</strong> Supports knowledge
+                        sharing and peer interaction.
+                      </li>
+                      <li>
+                        <strong>Administration:</strong> Supports student and
+                        tutor management.
+                      </li>
+                    </ul>
+                    <h4>My Contribution</h4>
+                    <ul class="bullets">
+                      <li>
+                        Developed personalized learning dashboards and learning
+                        pathways.
+                      </li>
+                      <li>
+                        Implemented tutor recommendations and placement
+                        assessments.
+                      </li>
+                      <li>
+                        Developed administrative functionalities for student and
+                        tutor management.
+                      </li>
+                      <li>
+                        Used Jira for task tracking, progress monitoring, and
+                        team collaboration.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-3"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React.js</span
+                    ><span class="chip">Django</span
+                    ><span class="chip">DRF</span
+                    ><span class="chip">Tailwind CSS</span
+                    ><span class="chip">PostgreSQL</span
+                    ><span class="chip">Jira</span>
+                  </div>
+                  <a
+                    href="https://github.com/Janith303/English-Tutor"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div class="p-img">
+                <img
+                  src="assets/img/projects/smart-campus/login-ui.png"
+                  alt="Smart Campus Operations Hub Login UI"
+                /><span class="p-num">04</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">University Group Project · 2026</span>
+                <h3>Smart Campus Operations Hub</h3>
+                <p>
+                  A centralized university operations management platform
+                  designed to streamline facility bookings, resource management,
+                  and maintenance incident handling.
+                </p>
+                <div class="more" id="more-4">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>Facility Booking:</strong> Supports the
+                        reservation and management of campus facilities.
+                      </li>
+                      <li>
+                        <strong>Facilities &amp; Assets Catalogue:</strong>
+                        Provides centralized management of campus resources and
+                        assets.
+                      </li>
+                      <li>
+                        <strong>Availability Management:</strong> Supports
+                        resource availability scheduling and operational status
+                        management.
+                      </li>
+                      <li>
+                        <strong>Incident Management:</strong> Facilitates
+                        reporting and handling of maintenance incidents.
+                      </li>
+                    </ul>
+                    <h4>My Contribution</h4>
+                    <ul class="bullets">
+                      <li>
+                        Developed the Facilities and Assets Catalogue module.
+                      </li>
+                      <li>
+                        Implemented resource management functionalities and
+                        RESTful APIs.
+                      </li>
+                      <li>
+                        Developed availability scheduling, resource search, and
+                        filtering functionalities.
+                      </li>
+                      <li>
+                        Used Trello to manage assigned tasks and support team
+                        collaboration.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-4"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">Java</span
+                    ><span class="chip">Spring Boot</span
+                    ><span class="chip">React.js</span
+                    ><span class="chip">MySQL</span
+                    ><span class="chip">GitHub Actions</span
+                    ><span class="chip">Trello</span>
+                  </div>
+                  <a
+                    href="https://github.com/Janith303/it3030-paf-2026-Smart-Campus-group18"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div class="p-img">
+                <img
+                  src="assets/img/projects/doctor-booking/medilink.png"
+                  alt="Doctor Appointment Booking System - Medilink UI"
+                /><span class="p-num">05</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">Personal Project · 2025</span>
+                <h3>Doctor Appointment Booking System</h3>
+                <p>
+                  A responsive full-stack healthcare platform with dedicated
+                  portals for patients, doctors, and administrators, designed to
+                  simplify appointment booking and management.
+                </p>
+                <div class="more" id="more-5">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>Patient Portal:</strong> Doctor appointment
+                        booking and management.
+                      </li>
+                      <li>
+                        <strong>Doctor Dashboard:</strong> Appointment and
+                        schedule management.
+                      </li>
+                      <li>
+                        <strong>Admin Portal:</strong> Centralized platform
+                        administration.
+                      </li>
+                      <li>
+                        <strong>Role-Based Authentication:</strong> Secure user
+                        access.
+                      </li>
+                      <li>
+                        <strong>Payment Integration:</strong> Secure online
+                        appointment payments.
+                      </li>
+                    </ul>
+                    <h4>Development &amp; Implementation</h4>
+                    <ul class="bullets">
+                      <li>
+                        Designed and developed a responsive full-stack web
+                        application.
+                      </li>
+                      <li>Implemented JWT-based role authentication.</li>
+                      <li>
+                        Developed appointment management workflows and
+                        dashboards.
+                      </li>
+                      <li>Integrated a secure payment gateway.</li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-5"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React.js</span
+                    ><span class="chip">Node.js</span
+                    ><span class="chip">Express.js</span
+                    ><span class="chip">MongoDB</span
+                    ><span class="chip">Tailwind CSS</span
+                    ><span class="chip">JWT</span>
+                  </div>
+                  <a
+                    href="https://github.com/ruwanthiThe/Doctor-Appointment"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div
+                class="p-img stage"
+                data-gallery='[
+              {"src":"assets/img/projects/x-clone/01-home-feed.jpg","alt":"X Clone Home Feed","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/02-profile.jpg","alt":"X Clone User Profile","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/03-auth.jpg","alt":"X Clone Google & Apple Auth","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/04-trending.jpg","alt":"X Clone Trending & Search","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/05-notifications.jpg","alt":"X Clone Activity Notifications","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/06-messages.jpg","alt":"X Clone Private Messages","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/07-comments.jpg","alt":"X Clone Post Comments","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/08-create-post.jpg","alt":"X Clone Create Post","fit":"contain"},
+              {"src":"assets/img/projects/x-clone/09-edit-profile.jpg","alt":"X Clone Edit Profile","fit":"contain"}
+            ]'
+              >
+                <img
+                  class="contain"
+                  src="assets/img/projects/x-clone/01-home-feed.jpg"
+                  alt="X Clone Home Feed"
+                />
+                <span class="p-num">06</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">Personal Project · 2026</span>
+                <h3>X Clone Mobile App</h3>
+                <p>
+                  A full-stack social media mobile application inspired by X
+                  (Twitter), featuring content sharing, user interactions,
+                  messaging, and profile management.
+                </p>
+                <div class="more" id="more-6">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>User Authentication:</strong> Secure login using
+                        Clerk with Google and Apple sign-in.
+                      </li>
+                      <li>
+                        <strong>Content Sharing:</strong> Create text and image
+                        posts using the camera or gallery.
+                      </li>
+                      <li>
+                        <strong>Social Interactions:</strong> Like, comment, and
+                        receive activity notifications.
+                      </li>
+                      <li>
+                        <strong>Messaging:</strong> Private messaging with chat
+                        history and message deletion.
+                      </li>
+                      <li>
+                        <strong>Profile Management:</strong> Editable user
+                        profiles and trending content discovery.
+                      </li>
+                    </ul>
+                    <h4>Development &amp; Implementation</h4>
+                    <ul class="bullets">
+                      <li>
+                        Designed and developed a full-stack mobile application
+                        using React Native and Expo.
+                      </li>
+                      <li>
+                        Developed RESTful APIs using Express.js and MongoDB.
+                      </li>
+                      <li>
+                        Integrated Clerk for authentication and Cloudinary for
+                        image storage.
+                      </li>
+                      <li>
+                        Implemented social interactions, notifications,
+                        messaging, and profile management functionalities.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-6"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React Native</span
+                    ><span class="chip">Expo</span
+                    ><span class="chip">Node.js</span
+                    ><span class="chip">Express.js</span
+                    ><span class="chip">MongoDB</span
+                    ><span class="chip">Clerk</span
+                    ><span class="chip">Cloudinary</span>
+                  </div>
+                  <a
+                    href="https://github.com/ruwanthiThe"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <div
+                class="p-img stage"
+                data-gallery='[
+              {"src":"assets/img/projects/whisper/01-web-landing.jpeg","alt":"Whisper Web Landing","fit":"cover"},
+              {"src":"assets/img/projects/whisper/02-web-chat.jpeg","alt":"Whisper Web Real-Time Chat","fit":"cover"},
+              {"src":"assets/img/projects/whisper/03-web-new-chat.jpeg","alt":"Whisper Web New Chat","fit":"cover"},
+              {"src":"assets/img/projects/whisper/04-mobile-auth.jpeg","alt":"Whisper Mobile Sign-In","fit":"contain"},
+              {"src":"assets/img/projects/whisper/05-mobile-chats.jpg","alt":"Whisper Mobile Chats","fit":"contain"},
+              {"src":"assets/img/projects/whisper/06-mobile-chat-room.jpg","alt":"Whisper Mobile Conversation","fit":"contain"},
+              {"src":"assets/img/projects/whisper/07-mobile-new-chat.jpg","alt":"Whisper Mobile Search Users","fit":"contain"},
+              {"src":"assets/img/projects/whisper/08-mobile-profile.jpg","alt":"Whisper Mobile Profile","fit":"contain"}
+            ]'
+              >
+                <img
+                  src="assets/img/projects/whisper/01-web-landing.jpeg"
+                  alt="Whisper Web Landing"
+                />
+                <span class="p-num">07</span>
+              </div>
+              <div class="p-body">
+                <span class="badge">Personal Project · 2026</span>
+                <h3>Full-Stack Real-Time Chat Application</h3>
+                <p>
+                  A cross-platform real-time messaging application with mobile
+                  and web interfaces, powered by a shared backend to provide a
+                  seamless communication experience.
+                </p>
+                <div class="more" id="more-7">
+                  <div>
+                    <h4>Key Features</h4>
+                    <ul class="bullets">
+                      <li>
+                        <strong>Real-Time Messaging:</strong> Instant message
+                        exchange using WebSocket communication.
+                      </li>
+                      <li>
+                        <strong>Typing Indicators:</strong> Displays real-time
+                        typing activity.
+                      </li>
+                      <li>
+                        <strong>User Presence:</strong> Tracks online and
+                        offline user status.
+                      </li>
+                      <li>
+                        <strong>Secure Authentication:</strong> User
+                        authentication and management through Clerk.
+                      </li>
+                      <li>
+                        <strong>Cross-Platform Support:</strong> Consistent
+                        functionality across iOS, Android, and web.
+                      </li>
+                    </ul>
+                    <h4>Development &amp; Implementation</h4>
+                    <ul class="bullets">
+                      <li>
+                        Developed mobile and web applications using React Native
+                        and React.
+                      </li>
+                      <li>
+                        Built a shared backend and RESTful APIs using Bun,
+                        Express.js, and MongoDB.
+                      </li>
+                      <li>
+                        Developed a custom socket server for real-time
+                        communication.
+                      </li>
+                      <li>
+                        Integrated Clerk for authentication and Sentry for error
+                        monitoring and crash reporting.
+                      </li>
+                      <li>Deployed backend services using Dockploy.</li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="toggle"
+                  aria-expanded="false"
+                  aria-controls="more-7"
+                >
+                  <span>See more</span
+                  ><svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="p-foot">
+                  <div class="chips">
+                    <span class="chip">React</span
+                    ><span class="chip">React Native</span
+                    ><span class="chip">Expo</span
+                    ><span class="chip">TypeScript</span
+                    ><span class="chip">Bun</span
+                    ><span class="chip">WebSockets</span
+                    ><span class="chip">Sentry</span>
+                  </div>
+                  <a
+                    href="https://github.com/ruwanthiThe"
+                    target="_blank"
+                    rel="noopener"
+                    class="icon-btn gh-link"
+                    aria-label="View code on GitHub"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="wrap">
+          <div class="contact-hero reveal">
+            <div class="label"><span class="v">04</span> · Contact</div>
+            <h2>Let's build something <span class="v">together.</span></h2>
+          </div>
+          <div class="contact-grid">
+            <div class="card reveal">
+              <h3 style="font-size: 26px; margin-bottom: 24px">
+                Send a Message
+              </h3>
+              <form id="contactForm">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="your.email@example.com"
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Your message here..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-volt">
+                  Send Message
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 12h14m-6-6l6 6-6 6"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="links">
+              <a
+                href="https://github.com/ruwanthiThe"
+                target="_blank"
+                rel="noopener"
+                class="card link-card reveal"
+              >
+                <span class="icon-btn"
+                  ><i class="devicon-github-original"></i
+                ></span>
+                <div>
+                  <h3>GitHub</h3>
+                  <p>github.com/ruwanthiThe</p>
+                </div>
+                <svg
+                  class="arr"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M9 7h8v8"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ruwanthi-thennakoon-469062371"
+                target="_blank"
+                rel="noopener"
+                class="card link-card reveal"
+              >
+                <span class="icon-btn"
+                  ><i class="devicon-linkedin-plain"></i
+                ></span>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p>Connect with Me</p>
+                </div>
+                <svg
+                  class="arr"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M9 7h8v8"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:ruthennakoon@gmail.com"
+                class="card link-card reveal"
+              >
+                <span class="icon-btn"
+                  ><svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="var(--volt)"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    /></svg
+                ></span>
+                <div>
+                  <h3>Email</h3>
+                  <p>ruthennakoon@gmail.com</p>
+                </div>
+                <svg
+                  class="arr"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M9 7h8v8"
+                  />
+                </svg>
+              </a>
+              <a href="tel:+94763101241" class="card link-card reveal">
+                <span class="icon-btn"
+                  ><svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="var(--volt)"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    /></svg
+                ></span>
+                <div>
+                  <h3>Phone</h3>
+                  <p>+94 76 310 1241</p>
+                </div>
+                <svg
+                  class="arr"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M9 7h8v8"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span class="label">© 2026. All rights reserved.</span>
+        <span class="label">Ruwanthi <span class="v">Thennakoon</span></span>
+      </div>
+    </footer>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Project screenshot preview"
+    >
+      <div class="lb-inner">
+        <div class="lb-bar">
+          <div class="lb-cap" id="lbCap"></div>
+          <button
+            type="button"
+            class="lb-btn"
+            id="lbClose"
+            aria-label="Close preview"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="lb-media">
+          <button
+            type="button"
+            class="lb-btn lb-nav prev"
+            id="lbPrev"
+            aria-label="Previous screenshot"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 18l-6-6 6-6"
+              />
+            </svg>
+          </button>
+          <img id="lbImg" src="" alt="" />
+          <button
+            type="button"
+            class="lb-btn lb-nav next"
+            id="lbNext"
+            aria-label="Next screenshot"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 18l6-6-6-6"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Nav border on scroll + active link
+      const nav = document.getElementById("nav");
+      const links = [...document.querySelectorAll(".nav-links a:not(.btn)")];
+      const sections = links.map((a) =>
+        document.querySelector(
+          a.getAttribute("href") === "#home" ? "#hero" : a.getAttribute("href"),
+        ),
+      );
+
+      // Timeline line draws as you scroll through it
+      const timeline = document.getElementById("timeline");
+      const fill = document.getElementById("timelineFill");
+
+      function onScroll() {
+        nav.classList.toggle("scrolled", scrollY > 10);
+        let current = 0;
+        sections.forEach((s, i) => {
+          if (s.getBoundingClientRect().top < innerHeight * 0.4) current = i;
+        });
+        links.forEach((a, i) => a.classList.toggle("active", i === current));
+        const r = timeline.getBoundingClientRect();
+        const p = Math.min(
+          1,
+          Math.max(0, (innerHeight * 0.6 - r.top) / r.height),
+        );
+        fill.style.height = p * (r.height - 16) + "px";
+      }
+      addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Mobile drawer
+      const drawer = document.getElementById("drawer");
+      const openBtn = document.getElementById("menuOpen");
+      function setDrawer(open) {
+        drawer.classList.toggle("open", open);
+        drawer.setAttribute("aria-hidden", !open);
+        openBtn.setAttribute("aria-expanded", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+      openBtn.onclick = () => setDrawer(true);
+      document.getElementById("menuClose").onclick = () => setDrawer(false);
+      drawer
+        .querySelectorAll("a")
+        .forEach((a) => (a.onclick = () => setDrawer(false)));
+
+      // Project carousels & lightbox preview
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbCap = document.getElementById("lbCap");
+      const lbPrev = document.getElementById("lbPrev");
+      const lbNext = document.getElementById("lbNext");
+      let lbList = [],
+        lbIdx = 0;
+
+      function renderLightbox() {
+        const item = lbList[lbIdx];
+        lbImg.src = item.src;
+        lbImg.alt = item.alt;
+        lbCap.innerHTML =
+          "<span>" + (lbIdx + 1) + " / " + lbList.length + "</span>" + item.alt;
+        lbPrev.style.display = lbList.length > 1 ? "grid" : "none";
+        lbNext.style.display = lbList.length > 1 ? "grid" : "none";
+      }
+      function openLightbox(list, index) {
+        lbList = list;
+        lbIdx = index;
+        renderLightbox();
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox() {
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+      document.getElementById("lbClose").onclick = closeLightbox;
+      lb.addEventListener("click", (e) => {
+        if (e.target === lb) closeLightbox();
+      });
+      lbPrev.onclick = () => {
+        lbIdx = (lbIdx - 1 + lbList.length) % lbList.length;
+        renderLightbox();
+      };
+      lbNext.onclick = () => {
+        lbIdx = (lbIdx + 1) % lbList.length;
+        renderLightbox();
+      };
+
+      document.querySelectorAll(".p-img").forEach((box) => {
+        const img = box.querySelector("img");
+        const raw = box.getAttribute("data-gallery");
+        const list = raw
+          ? JSON.parse(raw)
+          : [{ src: img.getAttribute("src"), alt: img.getAttribute("alt") }];
+        let idx = 0;
+
+        if (list.length > 1) {
+          const count = document.createElement("span");
+          count.className = "p-count";
+          count.textContent = "1 / " + list.length;
+
+          const prev = document.createElement("button");
+          prev.type = "button";
+          prev.className = "p-nav prev";
+          prev.setAttribute("aria-label", "Previous screenshot");
+          prev.innerHTML =
+            '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>';
+
+          const next = document.createElement("button");
+          next.type = "button";
+          next.className = "p-nav next";
+          next.setAttribute("aria-label", "Next screenshot");
+          next.innerHTML =
+            '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"/></svg>';
+
+          const show = (nextIdx) => {
+            idx = (nextIdx + list.length) % list.length;
+            img.src = list[idx].src;
+            img.alt = list[idx].alt;
+            img.classList.toggle("contain", list[idx].fit === "contain");
+            count.textContent = idx + 1 + " / " + list.length;
+          };
+          prev.onclick = (e) => {
+            e.stopPropagation();
+            show(idx - 1);
+          };
+          next.onclick = (e) => {
+            e.stopPropagation();
+            show(idx + 1);
+          };
+          box.append(count, prev, next);
+        }
+
+        img.addEventListener("click", () => openLightbox(list, idx));
+      });
+
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          setDrawer(false);
+          closeLightbox();
+        }
+        if (!lb.classList.contains("open")) return;
+        if (e.key === "ArrowLeft" && lbList.length > 1) lbPrev.click();
+        if (e.key === "ArrowRight" && lbList.length > 1) lbNext.click();
+      });
+
+      // Scroll reveal, staggered within each row
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const siblings = [...e.target.parentElement.children].filter((c) =>
+              c.classList.contains("reveal"),
+            );
+            e.target.style.transitionDelay =
+              (siblings.indexOf(e.target) % 3) * 0.12 + "s";
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // See more / less
+      document.querySelectorAll(".toggle").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const open = btn.getAttribute("aria-expanded") !== "true";
+          document
+            .getElementById(btn.getAttribute("aria-controls"))
+            .classList.toggle("open", open);
+          btn.setAttribute("aria-expanded", open);
+          btn.querySelector("span").textContent = open
+            ? "See less"
+            : "See more";
+        }),
+      );
+
+      // Hero glow follows cursor
+      const hero = document.getElementById("hero");
+      hero.addEventListener("pointermove", (e) => {
+        const r = hero.getBoundingClientRect();
+        hero.style.setProperty("--mx", e.clientX - r.left + "px");
+        hero.style.setProperty("--my", e.clientY - r.top + "px");
+      });
+
+      // Duplicate marquee items for a seamless loop
+      const mq = document.getElementById("marquee");
+      mq.innerHTML += mq.innerHTML;
+
+      // Contact form → opens the visitor's mail app (no backend)
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const subject = "Portfolio message from " + f.elements.name.value;
+        const body =
+          f.elements.message.value +
+          "\n\n— " +
+          f.elements.name.value +
+          " (" +
+          f.elements.email.value +
+          ")";
+        location.href =
+          "mailto:ruthennakoon@gmail.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    </script>
+  </body>
+</html>
